@@ -26,3 +26,25 @@ credit_card = "1234-5678-9012-3456"
 
 for char in credit_card:
     print(char)
+
+# ---------------------------------------------
+# CONTROL FLOW: CONTINUE and BREAK in FOR loops
+# ---------------------------------------------
+
+# ----------- CONTINUE -----------
+# Skip the number 13 and continue the loop
+
+print("Using CONTINUE:")
+for x in range(1, 21):
+    if x == 13:
+        continue  # Skip printing 13
+    print(x)
+
+# ----------- BREAK -----------
+# Stop the loop entirely when the number 13 is reached
+
+print("\nUsing BREAK:")
+for x in range(1, 21):
+    if x == 13:
+        break  # Exit the loop completely
+    print(x)
