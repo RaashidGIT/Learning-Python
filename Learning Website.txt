@@ -2,3 +2,6 @@ Job related Aptitude tests:  https://www.sanfoundry.com/#
 
 Training Algo muscles:  https://leetcode.com/
 
+Internship:  https://internshala.com/
+
+Basic Syntax:  https://www.w3schools.com/
