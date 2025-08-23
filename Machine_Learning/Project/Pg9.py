@@ -30,3 +30,12 @@ arr = np.array([1, 2, 3, 4])
 print("\nMean of arr:", np.mean(arr))
 print("Median of arr:", np.median(arr))
 print("Standard Deviation of arr:", np.std(arr))
+
+g = np.random.rand()
+print(g)
+
+h = np.random.rand(5)
+print(h)
+
+i = np.random.rand(2, 3)
+print(i)
