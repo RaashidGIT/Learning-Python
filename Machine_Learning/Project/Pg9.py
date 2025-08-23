@@ -23,6 +23,10 @@ print("\nArray e:")
 print(e)
 
 f = e.reshape((2, 3))
-print("\nArray f (reshaped e to 2x3):")
+print("\nReshaped e to 2x3:")
 print(f)
 
+arr = np.array([1, 2, 3, 4])
+print("\nMean of arr:", np.mean(arr))
+print("Median of arr:", np.median(arr))
+print("Standard Deviation of arr:", np.std(arr))
