@@ -17,3 +17,12 @@ print(c)
 d = np.arange(0, 10, 2)
 print("\nArray d (arange from 0 to 10, step 2):")
 print(d)
+
+e = np.arange(6)
+print("\nArray e:")
+print(e)
+
+f = e.reshape((2, 3))
+print("\nArray f (reshaped e to 2x3):")
+print(f)
+
