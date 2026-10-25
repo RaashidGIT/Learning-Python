@@ -155,7 +155,3 @@ class Solution:
 - **242. Valid Anagram:** frequency counting
 - **287. Find the Duplicate Number:** O(1) space using Floyd's cycle detection
 - **136. Single Number:** XOR trick
-
----
-
-Send over the next problem, or paste your own 217 solution and I'll compare it against these notes.
