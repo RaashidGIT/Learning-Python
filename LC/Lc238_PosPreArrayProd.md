@@ -180,6 +180,119 @@ class Solution:
 
 ---
 
+Here is the line-by-line breakdown:
+
+class Solution:
+Defines the class containing the method, standard for LeetCode problems.
+
+def productExceptSelf(self, nums: list[int]) -> list[int]:
+Defines the function that takes a list of integers (nums) and returns a new list of integers.
+
+res = [1] * (len(nums))
+Creates the result array res, initialized with 1s, completely matching the length of the input array.
+
+prefix = 1
+Initializes a running multiplier for the "left side" (prefix) product. It starts at 1 because there are no elements to the left of the first item.
+
+for i in range(len(nums)):
+Starts a forward loop to iterate through every index from left to right.
+
+res[i] = prefix
+Sets the current position in res to the product of all elements that came before index i.
+
+prefix *= nums[i]
+Updates the running prefix product by multiplying it by the current element, so the next index will include this number in its left-side product.
+
+postfix = 1
+Initializes a running multiplier for the "right side" (postfix) product. It starts at 1 because there are no elements to the right of the last item.
+
+for i in range(len(nums) - 1, -1, -1):
+Starts a backward loop from the last index (len(nums) - 1) down to 0.
+
+res[i] *= postfix
+Multiplies the existing value in res[i] (which currently holds the left-side product) by the postfix (the right-side product). This gives the final answer for that index.
+
+postfix *= nums[i]
+Updates the running postfix product by multiplying it by the current element, so the next index (moving leftwards) will include this number in its right-side product.
+
+return res
+Returns the fully populated result array.
+
+---
+
+Here is the step-by-step execution for nums = [1, 2, 3, 4].
+
+Initial Setup
+
+nums = [1, 2, 3, 4]
+
+res = [1, 1, 1, 1] (Initialized to 1s matching the length of nums)
+
+1. Forward Loop (Prefix Pass)
+We track the product of all numbers to the left of the current index.
+
+prefix = 1
+
+i = 0 (nums[0] = 1)
+
+res[0] = prefix ➔ res becomes [1, 1, 1, 1]
+
+prefix = prefix * nums[0] ➔ 1 * 1 = 1
+
+i = 1 (nums[1] = 2)
+
+res[1] = prefix ➔ res becomes [1, 1, 1, 1]
+
+prefix = prefix * nums[1] ➔ 1 * 2 = 2
+
+i = 2 (nums[2] = 3)
+
+res[2] = prefix ➔ res becomes [1, 1, 2, 1]
+
+prefix = prefix * nums[2] ➔ 2 * 3 = 6
+
+i = 3 (nums[3] = 4)
+
+res[3] = prefix ➔ res becomes [1, 1, 2, 6]
+
+prefix = prefix * nums[3] ➔ 6 * 4 = 24
+
+State of res after the first loop: [1, 1, 2, 6]
+
+2. Backward Loop (Postfix Pass)
+We track the product of all numbers to the right of the current index and multiply it with the existing res value.
+
+postfix = 1
+
+i = 3 (nums[3] = 4)
+
+res[3] = res[3] * postfix ➔ 6 * 1 = 6 ➔ res remains [1, 1, 2, 6]
+
+postfix = postfix * nums[3] ➔ 1 * 4 = 4
+
+i = 2 (nums[2] = 3)
+
+res[2] = res[2] * postfix ➔ 2 * 4 = 8 ➔ res becomes [1, 1, 8, 6]
+
+postfix = postfix * nums[2] ➔ 4 * 3 = 12
+
+i = 1 (nums[1] = 2)
+
+res[1] = res[1] * postfix ➔ 1 * 12 = 12 ➔ res becomes [1, 12, 8, 6]
+
+postfix = postfix * nums[1] ➔ 12 * 2 = 24
+
+i = 0 (nums[0] = 1)
+
+res[0] = res[0] * postfix ➔ 1 * 24 = 24 ➔ res becomes [24, 12, 8, 6]
+
+postfix = postfix * nums[0] ➔ 24 * 1 = 24
+
+Final Result
+The function returns [24, 12, 8, 6].
+
+---
+
 ## Why It Works
 
 After pass 1, `res[i]` holds the product of all elements strictly left of `i`. In pass 2, `postfix` holds the product of all elements strictly right of `i` at the moment it is applied, because it is multiplied in *before* `nums[i]` is folded into it. So `res[i]` ends up as left product x right product, which excludes `nums[i]` itself.
