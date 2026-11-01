@@ -180,7 +180,7 @@ class Solution:
 
 ---
 
-Here is the line-by-line breakdown:
+## Here is the line-by-line breakdown:
 
 * **`class Solution:`**
 Defines the class containing the method, standard for LeetCode problems.
@@ -209,7 +209,7 @@ Returns the fully populated result array.
 
 ---
 
-Here is the step-by-step execution for `nums = [1, 2, 3, 4]`.
+## Here is the step-by-step execution for `nums = [1, 2, 3, 4]`.
 
 **Initial Setup**
 
