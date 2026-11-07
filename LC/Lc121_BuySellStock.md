@@ -192,5 +192,3 @@ When `prices[r] <= prices[l]`, buying at `r` is at least as cheap as buying at `
 - **3. Longest Substring Without Repeating Characters:** same two-pointer window style
 
 ---
-
-Your solution is correct and optimal. Send the next problem, or ask for the C++ version of 121. When you have a few done, I can combine everything into one study document.
