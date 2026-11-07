@@ -198,5 +198,3 @@ Moving the taller pointer would be unsafe, because it could discard the pair tha
 - **1793. Maximum Score of a Good Subarray:** two pointers expanding outward
 
 ---
-
-Send the next problem, or ask for the C++ version of 11. With 1, 11, 49, 53, 121, 217 and 238 covered, I can also merge everything into a single study document whenever you like.
