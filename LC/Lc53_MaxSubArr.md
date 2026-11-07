@@ -216,5 +216,3 @@ Note that the check is `< 0`, not `<= 0`. Resetting on exactly 0 would also be c
 - **238. Product of Array Except Self:** a related prefix/suffix pattern
 
 ---
-
-Your solution is correct and optimal. Send the next problem, or ask for the C++ version of 53. Once you have a few more done, I can combine everything into one study document.
