@@ -218,5 +218,3 @@ The window never moves left, and `l` never passes `r`, because once `s[r]` has b
 - **121. Best Time to Buy and Sell Stock:** two pointers in a similar style
 
 ---
-
-Your solution is correct and optimal. Send the next problem, or ask for the C++ version of 3. With 1, 3, 11, 49, 53, 121, 217 and 238 covered, I can also merge everything into a single study document whenever you like.
