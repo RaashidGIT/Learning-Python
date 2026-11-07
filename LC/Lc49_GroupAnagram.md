@@ -193,5 +193,3 @@ Two strings are anagrams if and only if their letter-frequency vectors are equal
 - **1. Two Sum:** the same hash map lookup mindset
 
 ---
-
-Your solution is correct and optimal. Send the next problem, or ask for the C++ version of 49. Once you have a few more done, I can combine everything into one study document.
