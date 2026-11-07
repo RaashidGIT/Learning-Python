@@ -321,5 +321,3 @@ The order of operations inside each loop matters. Read or write first, then upda
 - **53. Maximum Subarray:** another one-pass running-value pattern
 
 ---
-
-Your solution is correct and optimal. Send the next problem, or ask for the C++ version of 238. Once you have a few more done, I can combine everything into one study document.
